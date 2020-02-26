@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
+    # path('', include(('stockprice.urls', 'stock'), namespace = 'stock')),
     path('admin/', admin.site.urls),
-    path('', include(('stockprice.urls', 'stock'), namespace = 'stock'))
+    path('accounts/', include('stockprice.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

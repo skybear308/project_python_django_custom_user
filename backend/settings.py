@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'stockprice',
 ]
 
+AUTH_USER_MODEL = 'stockprice.CustomUser'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -119,3 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# LOGIN_URL = '/accounts/login/'
+# LOGIN_REDIRECT_URL = '/accounts/profile'
+# LOGOUT_REDIRECT_URL = 'homepage'
